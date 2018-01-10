@@ -1,0 +1,232 @@
+h1 {
+  text-shadow: 2px 2px rgba(3, 7, 3, 0.74);
+}
+
+.projectDetailContainer{
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  padding-top: 50px;
+
+}
+
+#projectDetailwrapper{
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 1280px;
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+  .rightSide{
+    max-width: 253px;
+    min-width: 253px;
+  }
+
+  .ConnexeProjectsContainer{
+    max-height: 654px;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  .ConnexeProjectsContainer{
+    max-height: 654px;
+  }
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+  .projectDetailContainer .projectDetailwrapper{
+    max-width: 1066px;
+    min-width: 1003px;
+    width: auto;
+  }
+
+  .rightSide{
+    max-width: 253px;
+    min-width: 253px;
+  }
+
+}
+
+/* Medium screens ----------- */
+@media only screen
+and (min-width : 1224px) {
+  .projectDetailContainer .projectDetailwrapper{
+    max-width: 1280px;
+    min-width: 1003px;
+    width: auto;
+  }
+
+  .rightSide{
+    max-width: 283px;
+    min-width: 283px;
+  }
+
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+  .projectDetailContainer .projectDetailwrapper{
+    max-width: 1450px;
+    min-width: 1203px;
+    width: auto;
+  }
+}
+.background{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.project-image{
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  position: absolute;
+  width: 70%;
+}
+
+.project-image::after {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  background-image: -webkit-gradient(linear, left top, right top, from(#000), to(transparent));
+  background-image: -webkit-linear-gradient(right, #000, transparent);
+  background-image: -moz-linear-gradient(right, #000, transparent);
+  background-image: -o-linear-gradient(right, #000, transparent);
+  background-image: linear-gradient(to left, #000, transparent);
+  top: 0;
+  bottom: 0;
+  left: 71%;
+  width: 30%;
+}
+
+.projectInfo-Background{
+  background: #000;
+  position: absolute;
+  width: 30%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.project-thumbnail{
+  width: 100%;
+  height: 100%;
+}
+
+.content{
+  width: 100%;
+  padding: 1% 1% 1% 1%;
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.leftSide {
+  display: flex;
+  top: 0;
+  bottom: 0;
+  position: relative;
+  align-items: center;
+}
+
+.rightSide{
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+}
+
+.center{
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-shadow: 2px 2px rgba(3, 7, 3, 0.74);
+  margin: 0 2% 0 2%;
+  margin-right: 5%;
+  justify-content: space-around;
+}
+
+.projectName{
+  font-size: large;
+}
+
+.indicator__icon{
+  height: 34px;
+  width: 34px;
+}
+
+.detail-col, .budget-col{
+  display: flex;
+  flex-direction: row;
+}
+
+.detail-value, .budget-value{
+  margin-left: 7%;
+}
+
+.budget-value{
+  text-align: right;
+}
+
+.detail-containr, .description-container, .budget-container{
+  background-color: rgba(0, 0, 0, 0.80);
+  box-shadow: 0 0 10px 6px #000;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5em;
+}
+
+.project-manager-card-container{
+  position: relative;
+  align-self: center;
+}
+
+.detailProjectInfo{
+  position: relative;
+  display: flex ;
+  left: 25%;
+  bottom: 0;
+  flex-direction: column;
+}
+
+.Connexe-Projects-Container{
+  position: relative;
+  height: 80%;
+}
+
+

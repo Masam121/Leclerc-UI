@@ -1,0 +1,36 @@
+<div class="rightSideHeader">
+  <!--<h2> {{ "ConnexeProject.connexeProject" | translate }} {{connexProjects.length}} </h2>-->
+  <!--<div class="buttonContainer">
+    <button [disabled]="isInvalid()" (click)="scrollUp()"> ˄ </button>
+    <button (click)="scrollDown()"> ˅ </button>
+  </div>-->
+</div>
+<div #ConnexeProjectsContainer class="ConnexeProjectsContainer">
+  <mat-grid-list class="grid" cols="1" rowHeight="200px" gutterSize="18px">
+    <mat-grid-tile
+      *ngFor="let tile of connexProjects; let i = index;"
+      [colspan]="1"
+      [rowspan]="1" [routerLink]="['/project', tile.projectSapId]" id="grid{{tile.projectSapId}}">
+      <img class="tile__img" src="http://cdn.gbl/projectimage/{{tile.projectSapId}}.jpg" >
+      <div class="tile__title">
+        <div class="project__hover__title__container">
+          <p class="project__title">{{tile.projectName}}</p>
+        </div>
+        <div class="project__owner">
+          <img class="project__owner__picture" src={{tile.managerPicture.toString()}}>
+          <div class="success__indicator__container">
+            <div class="expected__finish_date"><time>{{tile.estEndDate}}</time></div>
+            <div class="wrapper">
+              <b class="completion__percentage">{{tile.completionPercentage}}%</b>
+              <div class="connexeProject-icon__container">
+                <mat-icon *ngIf="tile.projectStatus == 'Fine'" class="indicator__icon" svgIcon="thumbs-up"></mat-icon>
+                <mat-icon *ngIf="tile.projectStatus == 'Average'" class="indicator__icon" svgIcon="thumbs-up-down"></mat-icon>
+                <mat-icon *ngIf="tile.projectStatus == 'Bad'" class="indicator__icon" svgIcon="thumbs-down"></mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

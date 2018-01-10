@@ -1,0 +1,14 @@
+<mat-card class="project-manager-card">
+  <mat-card-header>
+    <img mat-card-avatar class="department-icon" src="/assets/img/icon-dir/{{departmentId}}.png" onError="this.src='/assets/img/icon-dir/departmentUnknown.jpg';">
+    <mat-card-title>{{managerName}}</mat-card-title>
+    <mat-card-subtitle>{{managerDepartment}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{managerPicture}}"
+       onError="this.src='https://www.jordans.com/~/media/jordans%20redesign/no-image-found.ashx?h=275&la=en&w=275&hash=F87BC23F17E37D57E2A0B1CC6E2E3EEE312AAD5B';">
+  <mat-card-content>
+  </mat-card-content>
+  <mat-card-actions class="profileButtonWrapper">
+    <button mat-button [routerLink]="['/employee', managerId]">{{ "ProjectManagerCard.profileButton" | translate }}</button>
+  </mat-card-actions>
+</mat-card>

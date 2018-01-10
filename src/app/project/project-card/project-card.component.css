@@ -1,0 +1,96 @@
+.tile__static__details{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.tile__media{
+  width: 100%;
+}
+
+.tile__img {
+  width: 100%;
+  height: 140px;
+}
+
+.project__header{
+  position: absolute;
+  width: 100%;
+  top:0;
+  left: 0;
+}
+
+.project__name_container{
+  display:inline-block;
+  overflow: hidden;
+  position: absolute;
+  table-layout: fixed;
+  white-space: nowrap;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.40);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-margin-after: 0em !important;
+
+}
+
+.project__owner{
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  bottom: 0;
+  left: 0;
+}
+
+.project__owner__picture{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  border: solid 2px white;
+  background-size: auto;
+  cursor: pointer;
+}
+
+.project__owner__name{
+  position: absolute;
+  left: 55px;
+  bottom: 41%;
+  font-size: 18px;
+  max-width: 150px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.60);
+}
+
+.success__indicator__container{
+  position: absolute;
+  width: 75%;
+  height: 20px;
+  left: 55px;
+  top: 35px;
+  background-color: rgba(0, 0, 0, 0.60);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.completion__icon__wrapper{
+  display: inline-flex;
+}
+
+.completion__percentage, .expected__finish_date{
+  align-self: center;
+}
+
+.expected__finish_date, .completion__percentage{
+  font-size: 15px;
+}
+
+

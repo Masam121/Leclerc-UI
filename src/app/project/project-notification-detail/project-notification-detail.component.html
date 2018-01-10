@@ -1,0 +1,15 @@
+<div class="container" #container>
+  <div class="radial-gradient-background"></div>
+  <div class="notification-details-wrapper">
+    <h1>{{test}}&nbsp;{{ "Notifications.title" | translate }}</h1>
+    <div class="graph-container">
+      <div class="leftside-graph">
+        <app-project-notification-tasks-stacked-bar-chart (filter)="filterStackedBarGraphEvent($event)"></app-project-notification-tasks-stacked-bar-chart>
+      </div>
+      <div class="rightside-graph">
+        <app-project-notifications-tasks-circle-graph (filter)="filterCircleGraphEvent($event)"></app-project-notifications-tasks-circle-graph>
+      </div>
+    </div>
+    <app-project-notification-data-table #taskDataTable></app-project-notification-data-table>
+  </div>
+</div>

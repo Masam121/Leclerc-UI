@@ -1,0 +1,85 @@
+.container{
+  padding-top: 55px;
+  overflow: auto;
+  position: relative;
+}
+
+.radial-gradient-background{
+  position: absolute;
+  background: radial-gradient(at top,black,#141414);
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  z-index: -1;
+}
+
+.notification-details-wrapper {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1280px;
+  position: relative;
+}
+
+.graph-container{
+  display: inline-flex;
+  justify-content: space-between;
+  height: auto;
+  width: auto;
+}
+
+.rightside-graph{
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+  .graph-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: auto;
+    width:auto;
+  }
+  .rightside-graph{
+  }
+  .leftside-graph{
+  }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+  .graph-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: auto;
+    width: auto;
+  }
+  .rightside-graph{
+  }
+  .leftside-graph{
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  .graph-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: auto;
+    width: auto;
+  }
+  .rightside-graph{
+  }
+  .leftside-graph{
+  }
+}

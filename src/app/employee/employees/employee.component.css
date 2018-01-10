@@ -1,0 +1,52 @@
+.gallery{
+  padding-top: 5%;
+}
+
+.gallery .galleryHeader {
+  padding: 36px 0 32px 0;
+  min-height: 44px;
+  margin: 0 4%;
+}
+
+.gallery .title {
+  font-size: 36px;
+}
+
+.galleryHeader .title {
+  display: inline-block;
+  margin-right: 20px;
+  line-height: 36px;
+}
+
+.galleryHeader .title .sectionTitle {
+  font-size: 26px;
+}
+
+.galleryHeader .subsections {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 7px;
+}
+
+.sortGallery {
+  float: right;
+  font-size: 26px;
+  text-align: right;
+}
+
+.galleryContent{
+  margin:0 4%;
+}
+
+.participant-container{
+  min-height: 44px;
+  margin: 0 4%;
+}
+
+.factories_md_select{
+  width: 100px;
+}
+
+.sort_md_select{
+  width: 200px;
+}

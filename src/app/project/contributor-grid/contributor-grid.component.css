@@ -1,0 +1,129 @@
+.participant-container{
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 1500px;
+  padding-bottom: 20px;
+}
+
+.radial-gradient-background{
+  position: absolute;
+  background: radial-gradient(at top,black,#141414);
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  z-index: -1;
+}
+
+.participant-container{
+  height: 100%;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+  .participant-container{
+
+    width: auto;
+  }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+  .participant-container{
+
+    width: auto;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  .participant-container{
+
+    width: 700px;
+  }
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+
+  .participant-container{
+
+    width: 600px;
+  }
+}
+
+/* Medium screens ----------- */
+@media only screen
+and (min-width : 1224px) {
+
+  .participant-container{
+
+    width: 1224px;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+  .participant-container{
+
+    width: 1500px;
+  }
+}
+
+.mat-grid-tile{
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: 0% 50% 0;
+  overflow-x: hidden;
+}
+
+
+.mat-grid-tile:hover .tile__details {
+  opacity: 1; }
+
+
+
+.grid:hover {
+  transform: translate3d(0px, 0, 0); }
+
+.grid:hover .mat-grid-tile {
+  opacity: .3; }
+.grid:hover .mat-grid-tile:hover {
+  transform: scale(1.2);
+  opacity: 1; }
+
+.mat-grid-tile:hover ~ .mat-grid-tile {
+  transform: translate3d(40px, 0, 0); }
+
+

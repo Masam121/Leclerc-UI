@@ -1,0 +1,254 @@
+{
+  "NavBar": {
+    "search" : "Rechercher un projet..."
+  },
+  "Drawer": {
+    "home" : "Menu Principal",
+    "dashboard" : "Tableau de bord",
+    "departments" : "Notifications",
+    "worker" : "Employés",
+    "watchlist" : "Watchlist"
+  },
+  "Project": {
+    "project" : "Projets en cours",
+    "facility" : "Installation",
+    "department" : "Département",
+    "sortBy" : "Trier par",
+    "suggestions" : "Suggestions pour vous",
+    "facilities" : [
+      "Toutes les installations",
+      "Siège social",
+      "Usine 010",
+      "Usine 020",
+      "Usine 032",
+      "Usine 100",
+      "Usine 200",
+      "Usine 300",
+      "Centre de recherche & développement"
+    ],
+    "departments" : [
+      "Tout les départments",
+      "050-Administration",
+      "070-Comptabilité des opérations",
+      "150-Human Ressources Humaines",
+      "160-Formation et développment org.",
+      "230-Marketing",
+      "250-Ventes",
+      "280-Service à la clientele",
+      "290-Communication",
+      "350-Recherche et développement",
+      "450-Planification et achats",
+      "530-Ingénirie et projets",
+      "550-Maintenance",
+      "650-Production",
+      "670-Santé et sécurité au travail",
+      "710-Salubrité",
+      "750-Qualité",
+      "752-Contrôle de la qualité",
+      "754-Microbiologie",
+      "790-Amélioration de la performence",
+      "820-Entreposage",
+      "850-Distribution",
+      "910-Gestion documentaire",
+      "950-Informatique",
+      "960-Intelligence d'affaires",
+      "970-Sécurité"
+    ],
+    "facilitiesValue": [
+      "1",
+      "0000",
+      "0010",
+      "0020",
+      "0032",
+      "0100",
+      "0200",
+      "0300",
+      "9"
+    ],
+    "sortings" : [
+      "All Axes",
+      "A-Administration",
+      "B-Ventes & Marketing",
+      "L-Logistique",
+      "O-Support aux Opération"
+    ],
+    "sortingsValues" : [
+      "undefined",
+      "Administration",
+      "Ventes",
+      "Logistique",
+      "Support"
+    ]
+  },
+  "Employee": {
+    "active" : "Employés Actifs",
+    "search" : "Recherche par nom...",
+    "teamPerPage" : "Employé Par Page",
+    "collapse": "Développer",
+    "limitOptionsName" : "Tous"
+  },
+
+  "EmployeeWorkload": {
+    "notificationWorkload": "Charge de travail liée aux notifications",
+    "assignedNotification": "Notifcations Assignées"
+  },
+
+  "ProjectDetailTabs":{
+    "detailTab": "Détails",
+    "notificationTab": "Notifications",
+    "documentTab": "Documents",
+    "contributorsTab": "Participants"
+  },
+  "DashBoardProjectsTitle":[
+    "Projets en retard",
+    "Projets en dépassement de buget"
+  ],
+
+  "DashBoardEmployeesTitle":[
+    "Gestionnaire de projet surchargé"
+  ],
+
+  "ProjectManagerCard": {
+    "projectInChargeTitle": "Projets en cours",
+    "smallProject": "Petits projets",
+    "mediumProject": "Moyens projets",
+    "largeProject": "Gros prpjets",
+    "profileButton": "Profil",
+    "watchlistButton": "WatchList"
+  },
+  "ProjectDetails":{
+    "detailsTitle": "Details",
+    "extent": "Ampleur :",
+    "projectStartDate": "Date de début",
+    "expetedFinishDate": "Fin espérée :",
+    "projectCompletion": "Complétion du projet :",
+    "department": "Département :",
+    "client": "Client :",
+    "facility": "Installation :"
+  },
+
+  "Document":{
+    "documentTitle": "Documents"
+  },
+
+  "ConnexeProject":{
+    "connexeProject": "Projets Connexes:"
+  },
+
+  "ProjectBudget":{
+    "budgetTitle": "Budget",
+    "initialInvestment": "Investissement initial :",
+    "expensesTitle": "Dépenses :",
+    "budgetSpent" : "Bugdet dépensé :",
+    "budgetRemaining": "Budget restant :"
+  },
+
+  "ProjectDescription":{
+    "descriptionTitle": "Description"
+  },
+
+  "EmployeeDetail": {
+    "title": "Titre :",
+    "department": "Département :",
+    "hiredDate": "Date d'embauche :",
+    "immediateSuperior": "Supérieur immédiat :",
+    "workload": "Charge de travail :",
+    "assignedProjects": "Projets assignés :",
+    "assignedTasks": "Tâches assignées"
+  },
+
+  "Participants": {
+    "title": "Participants"
+  },
+
+  "Notifications": {
+    "title": "Notifications",
+    "search": "Rechercher par description...",
+    "rowsPerPage": "Lignes Par Page"
+  },
+
+  "Task": {
+    "title": "Detail des Tâches"
+  },
+
+  "TableColEmployee": [
+    "#Id",
+    "Action",
+    "Projet",
+    "Date d'assignation",
+    "Fin estimée",
+    "Effort estimé",
+    "Status",
+    "Filtrer par nom de projet..."
+  ],
+
+  "TableColProject": [
+    "#Id",
+    "Action",
+    "Responsable",
+    "Date d'assignation",
+    "Fin estimée",
+    "Effort estimé",
+    "Status",
+    "filtrer par nom de responsable..."
+  ],
+
+  "EmployeeTaskTableTitle": {
+    "TotalWorkload" : "Charge total de travail de l'employé",
+    "TotalNumberOfTasks" : "Nombre de tâche total de l'employé"
+  },
+
+  "ProjectTaskTableTitle": {
+    "EstimatedDaysOfWork": "Nombre de jour de travail estimé",
+    "TotalWorkload" : "Charge total de travail du projet",
+    "TotalNumberOfTasks" : "Nombre de tâche total du projet"
+  },
+
+  "ProjectStackBarGraph": {
+    "title" : "Répartition des tâches sur le projet",
+    "YaxisLabel": "Nombre de tâches",
+    "categories": [
+      "En Retard",
+      "Pas Commencée",
+      "En Cours",
+      "Terminé"
+    ]
+  },
+
+  "ProjectCircleGraph": {
+    "title": "Progression du projet",
+    "graphCenterTitle": "TERMINÉ",
+    "categories": [
+      "En Retard",
+      "Pas Commencée",
+      "En Cours",
+      "Terminé"
+    ]
+  },
+
+  "EmployeeStackBarGraph": {
+    "title" : "Répartition des tâches sur tous les projets actifs",
+    "YaxisLabel": "Nombre de tâches",
+    "categories": [
+      "En Retard",
+      "Pas Commencée",
+      "En Cours",
+      "Terminé"
+    ]
+  },
+
+  "EmployeeCircleGraph": {
+    "graphCenterTitle1": "TAUX",
+    "graphCenterTitle2": "D'OCCUPATION",
+    "categories": [
+      "En Retard",
+      "Pas Commencée",
+      "En Cours",
+      "Temps Disponible"
+    ]
+  },
+
+  "Slider": {
+    "title": "Ratio du temps travaillé sur les projets"
+  }
+}

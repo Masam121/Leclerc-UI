@@ -1,0 +1,28 @@
+<ng-container>
+  <div class="tile__media" >
+    <img class="tile__img" src="http://cdn.gbl/projectimage/{{projectSAPId}}.jpg"
+         onError="this.src='http://bento.cdn.pbs.org/hostedbento-prod/filer_public/_bento_media/img/no-image-available.jpg';">
+  </div>
+  <div class="tile__static__details">
+    <div class="project__header">
+      <div class="project__name_container">
+        <span class="project__name">{{projectName}}</span>
+      </div>
+    </div>
+    <div class="project__owner">
+      <img class="project__owner__picture" src={{projectManagerPicture}}
+           onError="this.src='http://www.getsmartcontent.com/content/uploads/2014/08/shutterstock_149293433.jpg';">
+      <div class="success__indicator__container">
+        <div class="SAPId">{{projectSAPId}}</div>
+        <div class="expected__finish_date"><time>{{expectedFinishDate}}</time></div>
+        <div class="completion__icon__wrapper">
+          <b class="completion__percentage">{{completionPercentage}}%</b>
+          <mat-icon *ngIf="projectStatus == 'Fine'" class="indicator__icon" svgIcon="thumbs-up"></mat-icon>
+          <mat-icon *ngIf="projectStatus == 'Average'" class="indicator__icon" svgIcon="thumbs-up-down"></mat-icon>
+          <mat-icon *ngIf="projectStatus == 'Bad'" class="indicator__icon" svgIcon="thumbs-down"></mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+

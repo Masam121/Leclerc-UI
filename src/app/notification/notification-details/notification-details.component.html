@@ -1,0 +1,16 @@
+<div class="container" #container>
+  <div class="notification-details-wrapper" *ngIf="notification">
+    <div class="radial-gradient-background"></div>
+    <h1> {{notification.description}}&nbsp;{{ "Task.title" | translate }}</h1>
+    <div class="graph-container">
+      <div class="leftside-graph">
+        <app-notification-stacked-bar-chart (filter)="filterStackedBarGraphEvent($event)"></app-notification-stacked-bar-chart>
+      </div>
+      <div class="rightside-graph">
+        <app-notification-circle-graph (filter)="filterCircleGraphEvent($event)"></app-notification-circle-graph>
+      </div>
+    </div>
+    <app-notification-task-data-table #taskDataTable></app-notification-task-data-table>
+  </div>
+</div>
+

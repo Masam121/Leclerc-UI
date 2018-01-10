@@ -1,0 +1,85 @@
+
+.profile_container{
+  padding-top: 55px;
+  overflow: auto;
+  position: relative;
+}
+
+.profile_container:before{
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 0;
+
+  display: block;
+  background-image: url('http://i.huffpost.com/gen/5046256/images/o-BISCUITS-LECLERC-facebook.jpg');
+  background-size:cover;
+  width: 100%;
+  height: 100%;
+
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.profileWrapper{
+  background-color: #424242;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1280px;
+  position: relative;
+}
+
+.panel-employee, .panel-task, .panel-project{
+  margin-top: 20px;
+  background-color: #141414;
+  box-shadow: 0 0 10px 6px #000;
+}
+
+.panel-box-employee{
+  padding: 15px;
+  overflow: hidden;
+}
+
+.panel-body-employee{
+  display: inline-flex;
+  z-index: 10;
+}
+
+.employee-picture{
+  width: 50%;
+  max-width: 260px;
+  text-align: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  position: relative;
+  display: flex;
+}
+
+.employee-picture img{
+  align-self: center;
+  height: 340px;
+  width: 100%;
+}
+
+.employee-detail{
+  width: 70%;
+  margin-bottom: 20px;
+  z-index: 20;
+}
+
+.department-icon{
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  border: solid 2px white;
+  top: 15px;
+  right: 15px;
+  z-index: 20;
+  width: 200px;
+}
+
+

@@ -1,0 +1,23 @@
+<ng-container *ngIf="employeesList">
+  <div #horizontalCarouselContainer class="horizontalCarouselContainer" style="height: 500px">
+    <div class="header">
+      <h2> {{carouselHeaderName}} {{employeesList.length}} </h2>
+      <div class="buttonContainer" [ngClass]="{'Visable': scroll==true}" (window:resize)="onResize($event)">
+        <button [disabled]="isInvalid()" (click)="scrollUp()"> < </button>
+        <button (click)="scrollDown()"> > </button>
+      </div>
+    </div>
+    <div #row class="row">
+      <div class="rowInner" [ngClass]="{'singleTileRow': isSingle }">
+        <div class="tile" *ngFor="let tile of employeesList; let i = index;" [routerLink]="['/employee', tile.id]" id="tile{{i}}" [ngClass]="{'singleTile': isSingle , 'multipleTile': !isSingle}">
+          <app-employee-card [EmployeeImage]="tile.picture"
+                             [EmployeeDepartment]="tile.department"
+                             [EmployeeCapacity]="tile.occupancyRate"
+                             [EmployeeName]="tile.name"
+                             [EmployeeRole]="tile.title">
+          </app-employee-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

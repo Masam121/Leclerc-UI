@@ -1,0 +1,93 @@
+.horizontalCarouselContainer{
+  display: flex;
+}
+
+.header{
+  display: inline-flex;
+  align-content: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+}
+
+.header h2, .buttonContainer{
+  padding-left: 15px;
+}
+
+.buttonContainer{
+  display: none;
+  align-self: center;
+  padding-right: 15px;
+}
+
+.Visable{
+  display: block;
+}
+
+.row {
+  overflow-x: scroll;
+  align-self: flex-end;
+}
+
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+.rowInner {
+  transition: 450ms transform;
+  font-size: 0;
+  white-space: nowrap;
+  margin: 30px 0;
+  padding-bottom: 10px;
+  padding-top: 5px;
+
+}
+
+.tile {
+  position: relative;
+  display: inline-block;
+  width: 280px;
+  height: 140.625px;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: 0% 50% 0;
+  -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+  animation-delay: 2s;
+}
+
+.rowInner:hover {
+  transform: translate3d(-62.5px, 0, 0);
+}
+.rowInner:hover .tile {
+  opacity: .3; }
+
+.rowInner:hover .tile:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.tile:hover ~ .tile {
+  transform: translate3d(140px, 0, 0);
+}
+
+.rowInner:first-child .tile:first-child:hover ~ .tile{
+  transform: translate3d(185px, 0, 0);
+}
+
+.singleTileRow{
+  width: 425px;
+}
+
+.singleTile{
+  transform-origin: -50% 50% 0;
+}
+
+.multipleTile:first-child{
+  transform-origin: -50% 50% 0;
+}
+
+.multipleTile:last-child{
+  transform-origin: 50% 50% 0;
+}

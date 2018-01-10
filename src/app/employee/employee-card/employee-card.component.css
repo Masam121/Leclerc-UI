@@ -1,0 +1,78 @@
+.card-container{
+  height: 380px;
+}
+
+.tile__img{
+  width: 100%;
+  height: 100%;
+  /*object-fit: cover;*/
+}
+
+.tile__header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.project__owner__department{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  border: solid 2px white;
+  cursor: pointer;
+}
+
+.employee__work__charge{
+  font-size: 40px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.project__owner__info{
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.80);
+  font-size: 16px;
+}
+
+.project__owner__info p{
+  -webkit-margin-after: 0.25em !important;
+  -webkit-margin-before: 0.25em !important;
+}
+
+.tile__details {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 10px;
+  opacity: 1;
+  transition: 450ms opacity; }
+
+.tile__details:after {
+  margin-top: -25px;
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #ecf0f1;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1; }
+.tile__details:before {
+  width: 100%;
+  font-size: 30px;
+  margin-left: 7px;
+  margin-top: -18px;
+  text-align: center;
+  z-index: 2;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;}
+

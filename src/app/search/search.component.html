@@ -1,0 +1,19 @@
+
+<ng2-completer [(ngModel)]="searchStr"
+               [datasource]="dataService"
+               [minSearchLength]="0"
+               [placeholder]="placeholder"
+               [clearSelected]="true"
+               [autofocus]="true"
+               (selected)="onSelect($event)">
+</ng2-completer>
+<!--<div id="advancedSearch">
+  <i class="material-icons" id="advancedSearchIcon" (click)="toggleModal(1)">info</i>
+  <div id="modalAdvancedSearch" class="modal" [ngClass]="{'activeModal': toggle === 1}" click-outside (clickOutside)="onClickOutside($event)">
+    <div class="modal-content md-light" id="searchOptions">
+      <h4>Choose a search type</h4>
+      <input type="radio" name="advancedSearchType" value="Projects">Projects Name<br>
+      <input type="radio" name="advancedSearchType" value="Employees">Employees Name<br>
+    </div>
+  </div>-
+</div>-->

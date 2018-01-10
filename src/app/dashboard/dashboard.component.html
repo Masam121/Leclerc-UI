@@ -1,0 +1,16 @@
+
+<div class="dashboard-container">
+  <div class="carousel-projects-container" *ngFor="let project of projects">
+    <horizontal-carousel [projectsList]="project.rowProjects"
+                         [carouselHeaderName]="project.rowTitle"
+                         *ngIf="projects">
+    </horizontal-carousel>
+  </div>
+  <div class="carousel-employee-container" *ngFor="let employee of employees">
+    <app-horizontal-employee-carousel [employeesList]="employee.rowEmployee"
+                                      [carouselHeaderName]="employee.rowTitle"
+                                      *ngIf="employees">
+    </app-horizontal-employee-carousel>
+  </div>
+</div>
+

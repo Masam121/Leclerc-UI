@@ -1,0 +1,215 @@
+{
+  "NavBar": {
+    "search" : "proyecto de búsqueda..."
+  },
+  "Drawer": {
+    "home" : "Casa",
+    "dashboard" : "Dashboardo",
+    "departments" : "Notifications",
+    "worker" : "Trabajadores",
+    "watchlist" : "Lista de seguimiento"
+  },
+  "Project": {
+    "project" : "Proyectos en curso",
+    "facility" : "Instalacione",
+    "sortBy" : "Ordenar por",
+    "suggestions" : "Axes",
+    "facilities" : [
+      "Todas las instalaciones",
+      "Oficina Central",
+      "Planta 010",
+      "Planta 020",
+      "Planta 032",
+      "Planta 100",
+      "Planta 200",
+      "Planta 300",
+      "Centro de Desarrollo de la Investigación"
+    ],
+    "facilitiesValue": [
+      "1",
+      "0000",
+      "0010",
+      "0020",
+      "0032",
+      "0100",
+      "0200",
+      "0300",
+      "9"
+    ],
+    "sortings" : [
+      "Tarde",
+      "Exceder el presupuesto",
+      "Coste de más de 100 000 $",
+      "A-Z",
+      "Z-A"
+    ]
+  },
+  "Employee": {
+    "project" : "Empleados Activos",
+    "facility" : "Instalacione",
+    "sortBy" : "Ordenar por",
+    "suggestions" : "Sugerencias para ti",
+    "facilities" : [
+      "Todas las instalaciones",
+      "Oficina Central",
+      "Planta 010",
+      "Planta 020",
+      "Planta 032",
+      "Planta 100",
+      "Planta 200",
+      "Planta 300",
+      "Centro de Desarrollo de la Investigación"
+    ]
+  },
+  "ProjectDetailTabs":{
+    "detailTab": "detalles",
+    "notificationTab": "Notifications",
+    "documentTab": "Documentos",
+    "contributorsTab": "partícipe"
+  },
+  "DashBoardProjectsTitle":[
+    "Proyectos vencidos",
+    "Proyectos que exceden el presupuest",
+    "Proyectos con un gestor sobrecargado"
+  ],
+
+  "DashBoardEmployeesTitle":[
+    "Gerente de Proyecto sobrecargado"
+  ],
+
+
+  "ProjectManagerCard": {
+    "projectInChargeTitle": "Proyectos en marcha",
+    "smallProject": "Pequeños proyectos",
+    "mediumProject": "Proyectos medianos",
+    "largeProject": "Grandes proyectos",
+    "profileButton": "Perfil",
+    "watchlistButton": "WatchList"
+  },
+  "ProjectDetails":{
+    "detailsTitle": "Detalles",
+    "extent": "Grado :",
+    "projectStartDate": "Fecha de lanzamiento",
+    "expetedFinishDate": "Fecha de finalización prevista :",
+    "projectCompletion": "Finalización del proyecto :",
+    "department": "Departamento :",
+    "client": "Cliente :",
+    "facility": "Instalacione :"
+  },
+
+  "ConnexeProject":{
+    "connexeProject": "Proyectos Relacionados:"
+  },
+
+  "ProjectBudget":{
+    "budgetTitle": "Presupuesto",
+    "initialInvestment": "Inversión inicial :",
+    "expensesTitle": "Gastos :",
+    "budgetSpent" : "Presupuesto gastado :",
+    "budgetRemaining": "Presupuesto restante :"
+  },
+
+  "ProjectDescription":{
+    "descriptionTitle": "Descripción"
+  },
+
+  "EmployeeDetail": {
+    "title": "Título :",
+    "department": "Departamento :",
+    "hiredDate": "Fecha de contratación :",
+    "immediateSuperior": "Superior inmediato :",
+    "workload": "Carga de trabajo :",
+    "assignedProjects": "Proyectos asignados :",
+    "assignedTasks": "Tareas asignadas"
+  },
+
+  "Document":{
+    "documentTitle": "Documentos"
+  },
+
+  "Participants": {
+    "title": "Los participantes del proyecto"
+  },
+
+  "TableColEmployee": [
+    "#Id",
+    "Acción",
+    "Proyecto",
+    "Fecha de asignación",
+    "Est. de cierre",
+    "Esfuerzo",
+    "Estado",
+    "Filtrar por nombre del proyecto..."
+  ],
+
+  "TableColProject": [
+    "#Id",
+    "Acción",
+    "Responsable",
+    "Fecha de asignación",
+    "Est. de cierre",
+    "Esfuerzo",
+    "Estado",
+    "Filtrar por Nombre del responsable..."
+  ],
+
+  "EmployeeTaskTableTitle": {
+    "TotalWorkload" : "Cargo total de trabajo del empleado",
+    "TotalNumberOfTasks" : "Número de tareas totales del empleado"
+  },
+
+  "ProjectTaskTableTitle": {
+    "EstimatedDaysOfWork": "Días estimados de trabajo",
+    "TotalWorkload" : "Cargo total de travail du projet",
+    "TotalNumberOfTasks" : "Número de tareas totales del proyecto"
+  },
+
+  "ProjectStackBarGraph": {
+    "title" : "Revisión de las tareas del proyecto",
+    "YaxisLabel": "Nombre de tareas",
+    "categories": [
+      "Con Retraso",
+      "No Empezado",
+      "En Progreso",
+      "Terminar"
+    ]
+  },
+
+  "ProjectCircleGraph": {
+    "title": "Progresión del proyecto",
+    "graphCenterTitle": "TERMINADO",
+    "categories": [
+      "Con Retraso",
+      "No Empezado",
+      "En Progreso",
+      "Terminar"
+    ]
+  },
+
+  "EmployeeStackBarGraph": {
+    "title" : "Distribución de tareas en todos los proyectos activos",
+    "YaxisLabel": "Número de tareas",
+    "categories": [
+      "Con Retraso",
+      "No Empezado",
+      "En Progreso",
+      "Terminar"
+    ]
+  },
+
+  "EmployeeCircleGraph": {
+    "title": "Relación entre el tiempo trabajado en proyectos",
+    "graphCenterTitle1": "TASA DE",
+    "graphCenterTitle2": "OCUPACION",
+    "categories": [
+      "Con Retraso",
+      "No Empezado",
+      "En Progreso",
+      "Tiempo Disponible"
+    ]
+  },
+
+  "Slider": {
+    "title": "Relación entre tiempo trabajado proyectos"
+  }
+}

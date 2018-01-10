@@ -1,0 +1,135 @@
+.rightSideHeader{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 5em;
+}
+
+.buttonContainer{
+  align-self: flex-end;
+  width: 60px;
+}
+
+.grid{
+  transition: 450ms transform;
+}
+
+.mat-grid-tile{
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: 50% 50% 0;
+  overflow-x: hidden;
+}
+
+.tile__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.project__owner{
+  position: absolute;
+  width: 100%;
+  height: 33.34%;
+  bottom: 0;
+  left: 0;
+}
+
+.project__owner__picture{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  border: solid 2px white;
+  background-size: auto;
+  cursor: pointer;
+}
+
+.project__owner__name{
+  position: absolute;
+  left: 55px;
+  bottom: 40%;
+  font-size: 18px;
+  max-width: 150px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.40);
+}
+
+.success__indicator__container{
+  position: absolute;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+  height: 20px;
+  left: 55px;
+  top: 35px;
+  background-color: rgba(0, 0, 0, 0.60);
+
+}
+
+.wrapper{
+  display: inline-flex;
+}
+
+.expected__finish_date, .completion__percentage, .connexeProject-icon__container{
+  font-size: 15px;
+}
+
+.project__title{
+  font-size: 20px;
+  width: 100%;
+  overflow:hidden;
+  display:inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0.40);
+  -webkit-margin-before: 2% !important;
+  -webkit-margin-after: 0em !important;
+
+}
+
+.tile__details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 10px;
+  opacity: 1;
+  transition: 450ms opacity; }
+
+.tile__img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover; }
+
+.mat-grid-tile:hover .tile__details {
+  opacity: 1; }
+
+.tile__title {
+  position: absolute;
+  width: 100%;
+  height: 95%;
+}
+
+.grid:hover .mat-grid-tile {
+  opacity: .3; }
+.grid:hover .mat-grid-tile:hover {
+  transform: scale(1.2);
+  opacity: 1; }
+
+
+.ConnexeProjectsContainer{
+  position: relative;
+  padding: 5px 25px 25px 25px;
+  height: 832px;
+  overflow: hidden;
+}
+
+.ConnexeProjectsContainer::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,37 @@
+#advancedSearch{
+  width: 34px;
+  height: 100%;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+}
+
+#advancedSearchIcon{
+  margin: 6px;
+  color: #979797;
+}
+
+.modal{
+  position: absolute;
+  top: 30px;
+  left: 8px;
+  width: 150px;
+  display: none;
+}
+
+.activeModal{
+  position: absolute;
+  top: 30px;
+  left: 8px;
+  width: 180px;
+  display: flex;
+  background: grey;
+  border-radius: 10px;
+  box-shadow: black;
+}
+
+
+

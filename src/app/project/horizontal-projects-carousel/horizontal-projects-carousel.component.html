@@ -1,0 +1,25 @@
+
+<ng-container *ngIf="projectsList">
+  <div #horizontalCarouselContainer class="horizontalCarouselContainer" style="height: 250px">
+    <div class="header">
+      <h2> {{carouselHeaderName}} {{projectsList.length}} </h2>
+      <div class="buttonContainer" [ngClass]="{'Visable': scroll==true}" (window:resize)="onResize($event)">
+        <button [disabled]="isInvalid()" (click)="scrollUp()" (mousedown)="scrollUpHold()" (mouseup)="mouseUp()"> < </button>
+        <button (click)="scrollDown()" (mousedown)="scrollDownHold()" (mouseup)="mouseUp()"> > </button>
+      </div>
+    </div>
+    <div #row class="row" style="height: 210px">
+      <div class="rowInner" [ngClass]="{'singleTileRow': isSingle }">
+        <div class="tile" *ngFor="let tile of projectsList; let i = index;" [routerLink]="['/project', tile.projectSapId]" id="tile{{i}}" [ngClass]="{'singleTile': isSingle , 'multipleTile': !isSingle}">
+         <app-project-card [completionPercentage]="tile.completionPercentage"
+                           [expectedFinishDate]="tile.estEndDate"
+                           [projectManagerPicture]="tile.managerPicture"
+                           [projectName]="tile.projectName"
+                           [projectStatus]="tile.projectStatus"
+                           [thumbnail]="tile.projectSapId">
+         </app-project-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

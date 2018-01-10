@@ -1,0 +1,114 @@
+<app-progress-spinner class="spinner" *ngIf="!rows"></app-progress-spinner>
+<div class="gallery" *ngIf="rows">
+  <div class="notificationTable">
+    <input
+      type='text'
+      style='padding:8px;margin:15px auto;width:30%;'
+      [placeholder]="placeholder"
+      (keyup)='updateFilter($event)'
+    />
+    <mat-form-field>
+      <mat-select [placeholder]="teamPerPage" [(ngModel)]="limit">
+        <mat-option *ngFor="let option of limitOptions" [value]="option.value" (ngModelChange)="onPageSizeChanged($event)">
+          {{ option.key }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <ngx-datatable
+      #myTable
+      class="bootstrap"
+      [rows]="rows"
+      [columnMode]="'force'"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="'auto'"
+      [scrollbarH]="50"
+      [limit]="limit"
+      [selected]="selected"
+      [selectionType]="'single'"
+      (select)="onSelect($event)"
+    >
+      <ngx-datatable-column name="Name" prop="name" [width]="250">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+        <i>{{value}}</i>
+      </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Department" prop="department" [width]="250">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <i>{{value}}</i>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Title" prop="title" [width]="300">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <i>{{value}}</i>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Disponibilty" prop="disponibility">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <i>{{value}}</i>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="{{month0}}" prop="month0workload" [cellClass]="getCellClass" [width]="50">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <i>{{value}}%</i>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="{{month1}}" prop="month1workload" [cellClass]="getCellClass" [width]="50">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <i>{{value}}%</i>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="{{month2}}" prop="month2workload" [cellClass]="getCellClass" [width]="50">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <i>{{value}}%</i>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="{{month3}}" prop="month3workload" [cellClass]="getCellClass" [headerClass]="getColumnClass" [width]="50">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <i>{{value}}%</i>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="{{month4}}" prop="month4workload" [cellClass]="getCellClass" [width]="50">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <i>{{value}}%</i>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="{{month5}}" prop="month5workload" [cellClass]="getCellClass" [width]="50">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <i>{{value}}%</i>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="{{month6}}" prop="month6workload" [cellClass]="getCellClass" [width]="50">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <i>{{value}}%</i>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="{{month7}}" prop="month7workload" [cellClass]="getCellClass" [width]="50">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <i>{{value}}%</i>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="{{month8}}" prop="month8workload" [cellClass]="getCellClass" [width]="50">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <i>{{value}}%</i>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="{{month9}}" prop="month9workload" [cellClass]="getCellClass" [width]="50">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <i>{{value}}%</i>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="{{month10}}" prop="month10workload" [cellClass]="getCellClass" [width]="50">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <i>{{value}}%</i>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="{{month11}}" prop="month11workload"[cellClass]="getCellClass" [width]="50">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <i>{{value}}%</i>
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+</div>
+

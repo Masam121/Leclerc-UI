@@ -1,0 +1,17 @@
+<ng-container *ngIf="ratio">
+  <b class="slider-header">{{ "Slider.title" | translate }} : {{ratio}}%</b>
+  <mat-slider
+    class="example-margin"
+    [disabled]="disabled"
+    [invert]="invert"
+    [max]="max"
+    [min]="min"
+    [step]="step"
+    [thumb-label]="thumbLabel"
+    [tick-interval]="tickInterval"
+    [(ngModel)]="ratio"
+    [vertical]="vertical"
+    (change) = "onChange($event)"
+    (input)="onInputChange($event)">
+  </mat-slider>
+</ng-container>

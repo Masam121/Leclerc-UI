@@ -1,0 +1,63 @@
+i {
+  display: inline-block;
+  color: white;
+  cursor: pointer;
+}
+
+.logo {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  left: 60px;
+  height: 30px;
+  width: 50px;
+}
+
+#account {
+  position: relative;
+  top: 5px;
+  color: white;
+}
+
+#accountContainer {
+  margin-right: 20px;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.language-accountContainer{
+  position: relative;
+}
+
+.languageContainer{
+  margin-right: 10px;
+  margin-bottom: 0;
+  position: relative;
+}
+
+#searchContainer {
+  width: 40%;
+  height: 80%;
+  background-color: white;
+  opacity: 1;
+}
+
+#searchIcon {
+  margin: 12px;
+  margin-bottom: 0;
+  float: left;
+  color: black;
+}
+
+#navBar {
+  background-color: rgba(0,0,0,.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+
+

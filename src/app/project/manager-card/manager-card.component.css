@@ -1,0 +1,31 @@
+.department-icon{
+  border-radius: 50%;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  border: solid 2px white;
+}
+
+mat-card-content p{
+  padding-bottom: 1px;
+}
+
+mat-card-content p:hover{
+  border-bottom:1px solid #fff;
+}
+
+mat-card-content p {
+  cursor: pointer;
+}
+
+.mat-card-image{
+  max-width: 220px;
+  min-height: 300px;
+}
+
+.profileButtonWrapper{
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+
+

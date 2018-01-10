@@ -1,0 +1,266 @@
+{
+  "NavBar": {
+    "search" : "Search for a project..."
+  },
+  "Drawer": {
+    "home" : "Home",
+    "dashboard" : "Dashboard",
+    "departments" : "Notifications",
+    "worker" : "Workers",
+    "watchlist" : "Watchlist"
+  },
+  "Project": {
+    "project" : "Leclerc's Projects",
+    "facility" : "Facility",
+    "department" : "Department",
+    "sortBy" : "Sort by",
+    "suggestions" : "Axes",
+    "facilities" : [
+      "All facilities",
+      "Head Office",
+      "Plant 010",
+      "Plant 020",
+      "Plant 032",
+      "Plant 100",
+      "Plant 200",
+      "Plant 300",
+      "Research & Development Center"
+    ],
+    "departments" : [
+      "All department",
+      "050-Administration",
+      "070-Operation Accounting",
+      "150-Human Ressources Service",
+      "160-Training & Org. development",
+      "230-Marketing & Communication",
+      "250-Sales",
+      "280-Customer Service Management",
+      "290-Communication",
+      "350-Research & Development",
+      "450-Material Management",
+      "530-Engineering",
+      "550-Plant Maintenance Service",
+      "650-Production",
+      "670-Health & Safety",
+      "710-Sanitation",
+      "750-Quality Management",
+      "752-Quality Control Service",
+      "754-Microbiology",
+      "790-Continuous Improvement Service",
+      "820-Warehouse Management Service",
+      "850-Distribution",
+      "910-Knowledge Management Service",
+      "950-Information Technology Service",
+      "960-Business Intelligence",
+      "970-Security"
+    ],
+    "facilitiesValue": [
+      "1",
+      "0000",
+      "0010",
+      "0020",
+      "0032",
+      "0100",
+      "0200",
+      "0300",
+      "9"
+    ],
+    "sortings" : [
+      "All Axes",
+      "A-Administration",
+      "B-Sales & Marketing",
+      "L-logistics",
+      "O-Operations support"
+    ],
+    "sortingsValues" : [
+      "undefined",
+      "Administration",
+      "Ventes",
+      "Logistique",
+      "Support"
+    ]
+  },
+  "Employee": {
+    "active" : "Active Employees",
+    "search" : "Search by name...",
+    "teamPerPage" : "Employee Per Page",
+    "collapse": "Collapse",
+    "limitOptionsName" : "All"
+  },
+
+  "EmployeeWorkload": {
+    "notificationWorkload": "Notification's Workload",
+    "assignedNotification": "Assigned Notifications"
+  },
+
+  "ProjectDetailTabs":{
+    "detailTab": "Details",
+    "notificationTab": "Notifications",
+    "documentTab": "Documents",
+    "contributorsTab": "Contributors"
+  },
+  "DashBoardProjectsTitle":[
+    "Projects overdue",
+    "Projects exceeding budget",
+    "Projects with an overloaded manager"
+  ],
+
+  "DashBoardEmployeesTitle":[
+    "Overloaded project managers"
+  ],
+
+  "ProjectManagerCard": {
+    "projectInChargeTitle": "Ongoing projects",
+    "smallProject": "Small projects",
+    "mediumProject": "Medium projects",
+    "largeProject": "Large prpjects",
+    "profileButton": "Profile",
+    "watchlistButton": "WatchList"
+  },
+  "ProjectDetails":{
+    "detailsTitle": "Details",
+    "extent": "Extent :",
+    "projectStartDate": "Release date",
+    "expetedFinishDate": "Expected finish date :",
+    "projectCompletion": "Project Completion :",
+    "department": "Department :",
+    "client": "Client :",
+    "facility": "Facility :"
+  },
+
+  "Document":{
+    "documentTitle": "Documents"
+  },
+
+  "ConnexeProject":{
+    "connexeProject": "Connexe Projects:"
+  },
+
+  "ProjectBudget":{
+    "budgetTitle": "Budget",
+    "initialInvestment": "Initial investment :",
+    "expensesTitle": "Expenses :",
+    "budgetSpent" : "Bugdet spent :",
+    "budgetRemaining": "Budget left :"
+  },
+
+  "ProjectDescription":{
+    "descriptionTitle": "Description"
+  },
+
+  "EmployeeDetail": {
+    "title": "Title :",
+    "department": "Department :",
+    "hiredDate": "Hired Date :",
+    "immediateSuperior": "Immediate Superior :",
+    "workload": "Workload :",
+    "assignedProjects": "Assigned projects :",
+    "assignedTasks": "Assigned tasks"
+  },
+
+  "Participants": {
+    "title": "Contributors"
+  },
+
+  "Notifications": {
+    "title": "Notifications",
+    "search": "Search by description...",
+    "rowsPerPage": "Rows Per Page"
+  },
+
+  "Task": {
+    "title": "Tasks Detail"
+  },
+
+  "TableColEmployee": [
+    "#Id",
+    "Action",
+    "Project",
+    "Assignation date",
+    "Est. End",
+    "Est. Efforts",
+    "Status",
+    "Filter by project name..."
+  ],
+
+  "TableColProject": [
+    "#Id",
+    "Action",
+    "In charge",
+    "Assignation date",
+    "Est. End",
+    "Est. Efforts",
+    "Status",
+    "Filter by name of person in charge..."
+  ],
+
+  "EmployeeTaskTableTitle": {
+    "TotalWorkload" : "Total employee's workload",
+    "TotalNumberOfTasks" : "Total number of employee's tasks"
+  },
+
+  "ProjectTaskTableTitle": {
+    "EstimatedDaysOfWork": "Estimated days of work",
+    "TotalWorkload" : "Total projet's workload",
+    "TotalNumberOfTasks" : "Total number of project's tasks"
+  },
+
+  "ProjectStackBarGraph": {
+    "title" : "Distribution of tasks on the project",
+    "YaxisLabel": "Nomber of tasks",
+    "categories": [
+      "Late",
+      "Not Started",
+      "In Progress",
+      "Completed"
+    ]
+  },
+
+  "NotificationStackBarGraph": {
+    "title" : "Distribution of tasks on the notification",
+    "YaxisLabel": "Nomber of tasks",
+    "categories": [
+      "Late",
+      "Not Started",
+      "In Progress",
+      "Completed"
+    ]
+  },
+
+  "ProjectCircleGraph": {
+    "title": "Project progression",
+    "graphCenterTitle": "COMPLETED",
+    "categories": [
+      "Late",
+      "Not Started",
+      "In Progress",
+      "Completed"
+    ]
+  },
+
+  "EmployeeStackBarGraph": {
+    "title" : "Breakdown of tasks on all active projects",
+    "YaxisLabel": "Nomber of tasks",
+    "categories": [
+      "Late",
+      "Not Started",
+      "In Progress",
+      "Completed"
+    ]
+  },
+
+  "EmployeeCircleGraph": {
+    "graphCenterTitle1": "OCCUPANCY",
+    "graphCenterTitle2": "RATE",
+    "categories": [
+      "Late",
+      "Not Started",
+      "In Progress",
+      "Time Available"
+    ]
+  },
+
+  "Slider": {
+    "title": "Ratio of time worked on projects"
+  }
+}

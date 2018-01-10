@@ -1,0 +1,16 @@
+#refresh {
+  position: relative;
+  cursor: pointer;
+  top: 5px;
+  right:5px;
+  color: white;
+}
+
+#refresh:hover {
+  color: #9416ac;
+}
+
+#refresh:active {
+  color: white;
+}
+

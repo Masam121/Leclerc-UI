@@ -1,0 +1,17 @@
+<div class="participant-container" (window:resize)="onResize($event)">
+  <div class="radial-gradient-background"></div>
+  <h1>{{name}}&nbsp;{{ "Participants.title" | translate }}</h1>
+  <mat-grid-list class="grid" cols ="{{colsNumber}}" rowHeight="350px" gutterSize="30px">
+    <mat-grid-tile
+      *ngFor="let contributor of contributors"
+      [colspan]="1"
+      [rowspan]="1" [routerLink]="['/employee', contributor.employeeId]">
+      <app-employee-card [EmployeeImage]="contributor.picture"
+                         [EmployeeDepartment]="contributor.department"
+                         [EmployeeCapacity]="contributor.occupancyRate"
+                         [EmployeeName]="contributor.name"
+                         [EmployeeRole]="contributor.title">
+      </app-employee-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

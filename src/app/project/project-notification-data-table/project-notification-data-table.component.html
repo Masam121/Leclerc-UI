@@ -1,0 +1,98 @@
+<div class="notificationTable">
+  <input
+    type='text'
+    style='padding:8px;margin:15px auto;width:30%;'
+    [placeholder]="placeholder"
+    (keyup)='updateFilter($event)'
+  />
+  <ngx-datatable
+    #myTable
+    class='material expandable'
+    class="bootstrap"
+    [rows]="rows"
+    [columnMode]="'force'"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [scrollbarH]="50"
+    [rowHeight]="'auto'"
+    [selectionType]="'cell'"
+    (select)="onSelect($event)"
+    [limit]="10">
+    <!-- Row Detail Template -->
+    <ngx-datatable-row-detail [rowHeight]="120" #myDetailRow (toggle)="onDetailToggle($event)">
+      <ng-template let-row="row" let-expanded="expanded" ngx-datatable-row-detail-template>
+        <div class="datatable-row-detail">
+          <div class="button-container">
+            <button class="more-detail-button" (click)="gotoDetail(row)">More Details</button>
+          </div>
+          <div style="padding-left:35px;">
+            <div><strong>Partners</strong></div>
+            <div *ngFor="let partner of row.partners">{{partner.roleName}} - {{partner.employeeName}}({{partner.estEffort}})</div>
+          </div>
+        </div>
+      </ng-template>
+    </ngx-datatable-row-detail>
+
+    <!-- Column Templates -->
+    <ngx-datatable-column
+      [width]="50"
+      [resizeable]="false"
+      [sortable]="false"
+      [draggable]="false"
+      [canAutoResize]="false">
+      <ng-template let-row="row" let-expanded="expanded" ngx-datatable-cell-template>
+        <a
+          [class.datatable-icon-right]="!expanded"
+          [class.datatable-icon-down]="expanded"
+          title="Expand/Collapse Row"
+          (click)="toggleExpandRow(row)">
+        </a>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Project Name" [width]="200">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <strong>{{value}}</strong>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Id" [width]="80">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <strong>{{value}}</strong>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Description" [width]="200">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <strong>{{value}}</strong>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Creation" prop="creationDate" [width]="100">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <strong>{{value}}</strong>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="End Date" [width]="100">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <strong>{{value}}</strong>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Est. Eff." prop="estEffort" [width]="80">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <i>{{value}}</i>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Actual Eff." prop="actualEffort" [width]="100">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <i>{{value}}</i>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Completion" [cellClass]="getCellClass" [width]="120">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <i>{{value}}%</i>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Status" [width]="100">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <strong>{{value}}</strong>
+      </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>
+</div>

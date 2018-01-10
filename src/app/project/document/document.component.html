@@ -1,0 +1,40 @@
+<div class="documentContainer">
+  <div class="radial-gradient-background"></div>
+  <h1> {{name}}&nbsp;{{ "Document.documentTitle" | translate }}</h1>
+  <div class="DocumentWrapper" >
+    <div class="documentDescriptionContainer" >
+      <h2>Document's Description</h2>
+      <form class="document-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Document's Description" [(ngModel)]="description" name="description">
+          <div mat-button *ngIf="description" matSuffix mat-icon-button aria-label="Clear" (click)="description=''">
+            <mat-icon>close</mat-icon>
+          </div>
+        </mat-form-field>
+      </form>
+      <div class="descriptionWrapper" *ngFor="let doc of Documents">
+        <i class="material-icons" (click)="deleteDocument(doc)">delete</i>
+        <p>{{doc.documentDescription}}</p>
+      </div>
+    </div>
+    <div class="documentLinkContainer">
+      <h2>Document's Link</h2>
+      <div class="document-link-wrapper">
+        <form class="document-form">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Link" [(ngModel)]="link" name="link">
+            <div mat-button *ngIf="link" matSuffix mat-icon-button aria-label="Clear" (click)="link=''">
+              <mat-icon>close</mat-icon>
+            </div>
+          </mat-form-field>
+        </form>
+      <div class="accept-button-container" (click)="addDocument()">
+        <button>Add</button>
+      </div>
+      </div>
+      <div class="linkWrapper" *ngFor="let doc of Documents">
+        <p><a target="_blank" href="{{doc.documentLink}}">{{doc.documentLink}}</a></p>
+      </div>
+    </div>
+  </div>
+</div>

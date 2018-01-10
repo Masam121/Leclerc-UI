@@ -1,0 +1,118 @@
+<div class="projectDetailContainer" *ngIf="project">
+  <div class="projectDetail">
+    <mat-tab-group class="menu" (selectChange)="onSelect($event)" role="tablist" dynamicHeight="true">
+      <mat-tab >
+        <ng-template mat-tab-label >
+          {{ "ProjectDetailTabs.detailTab" | translate }}
+        </ng-template>
+        <div id="projectDetailwrapper">
+          <div class="background">
+            <div class="project-image">
+              <img class="project-thumbnail"src="http://p5.storage.canalblog.com/56/81/621059/80187519_o.jpg">
+            </div>
+            <div class="projectInfo-Background"></div>
+          </div>
+          <div class="content">
+            <div class="leftSide">
+              <div class="project-manager-card-container">
+                <h1>№ : {{project.projectSapId.toString()}}</h1>
+                <app-manager-card id="manager"[managerDepartment]="project.department"
+                                  [managerId]="project.projectManagerId"
+                                  [managerName]="project.managerName"
+                                  [managerPicture]="project.managerPicture">
+                </app-manager-card>
+              </div>
+            </div>
+            <div class="center">
+              <div class="specification-container">
+                <h1>{{project.projectName}} <span class="material-icons" (click)="print()">print</span>
+                  <span class="icon__container">
+                    <mat-icon *ngIf="project.projectStatus == 'Fine'" class="indicator__icon" svgIcon="thumbs-up"></mat-icon>
+                    <mat-icon *ngIf="project.projectStatus == 'Average'" class="indicator__icon" svgIcon="thumbs-up-down"></mat-icon>
+                    <mat-icon *ngIf="project.projectStatus == 'Bad'" class="indicator__icon" svgIcon="thumbs-down"></mat-icon>
+                  </span>
+                </h1>
+                <div class="detail-containr">
+                  <h2>{{ "ProjectDetails.detailsTitle" | translate }}</h2>
+                  <div class="detail-col">
+                    <div class="detail-label">
+                      <p>{{ "ProjectDetails.extent" | translate }}</p>
+                      <p>{{ "ProjectDetails.projectStartDate" | translate }}</p>
+                      <p>{{ "ProjectDetails.expetedFinishDate" | translate }}</p>
+                      <p>{{ "ProjectDetails.projectCompletion" | translate }}</p>
+                      <p>{{ "ProjectDetails.department" | translate }}</p>
+                      <p>{{ "ProjectDetails.client" | translate }}</p>
+                      <p>{{ "ProjectDetails.facility" | translate }}</p>
+                    </div>
+                    <div class="detail-value">
+                      <p> {{project?.priority}}&nbsp;</p>
+                      <p> {{project?.startDate}}&nbsp;</p>
+                      <p> {{project?.estEndDate}}&nbsp;</p>
+                      <p> {{project?.completionPercentage}}%</p>
+                      <p> {{project?.department}}&nbsp;</p>
+                      <p> {{project?.projectsClient}}&nbsp;</p>
+                      <p> {{project?.factory}}"&nbsp;</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="description-container">
+                  <h2>{{ "ProjectDescription.descriptionTitle" | translate }}</h2>
+                  <p> {{project.description}}</p>
+                </div>
+                <div class="budget-container">
+                  <h2>{{ "ProjectBudget.budgetTitle" | translate }}</h2>
+                  <div class="budget-col">
+                    <div class="budget-label">
+                      <p>{{ "ProjectBudget.initialInvestment" | translate }}</p>
+                      <p>{{ "ProjectBudget.budgetSpent" | translate }}</p>
+                      <p>{{ "ProjectBudget.budgetRemaining" | translate }}</p>
+                    </div>
+                    <div class="budget-value">
+                      <p>{{initialBudget}}$</p>
+                      <p>{{budgetSpent}}$</p>
+                      <p>{{budgetLeft}}$</p>
+                    </div>
+                  </div>
+                  <h3>{{ "ProjectBudget.expensesTitle" | translate }}</h3>
+                  <div class="budget-col">
+                    <div class="budget-label">
+                      <ng-container *ngFor="let expense of project.expenses">
+                        <p> {{expense.expenseName}} :</p>
+                      </ng-container>
+                    </div>
+                    <div class="budget-value">
+                      <ng-container *ngFor="let expense of expenses">
+                        <p> {{expense}}$</p>
+                      </ng-container>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rightSide">
+             <app-vertical-project-carousel [connexProjects]="project.connexeProject"></app-vertical-project-carousel>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          {{ "ProjectDetailTabs.notificationTab" | translate }}
+        </ng-template>
+        <app-project-notificcation-detail [projectName]="project.projectName" *ngIf="tasksTabLoad"></app-project-notificcation-detail>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          {{ "ProjectDetailTabs.documentTab" | translate }}
+        </ng-template>
+        <app-document [name]="project.projectName"></app-document>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          {{ "ProjectDetailTabs.contributorsTab" | translate }}
+        </ng-template>
+        <app-contributor-grid [name]="project.projectName"></app-contributor-grid>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="gallery">
+  <div class="galleryHeader">
+    <div class="first_sort_wrapper">
+      <div class="title">
+        <span class="sectionTitle">{{ "Project.project" | translate }}</span>
+      </div>
+      <div class="subsections">
+        <mat-form-field style="width: 200px" floatPlaceholder="never">
+          <mat-select class="factories_md_select" placeholder="{{ 'Project.facility' | translate }}" [(ngModel)]="myFilter1" floatPlaceholder="never" >
+            <mat-option *ngFor="let facility of facilities" [value]="facility.value" (click)="filterProjects($event);">{{ facility.name }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="subsections">
+        <mat-form-field style="width: 200px" floatPlaceholder="never">
+          <mat-select class="department_md_select" placeholder="{{ 'Project.department' | translate }}" [(ngModel)]="myFilter3" floatPlaceholder="never" >
+            <mat-option *ngFor="let department of departments" [value]="department" (click)="filterProjects($event);">{{ department }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="sortGallery">
+      <div class="title">
+        <span class="sectionTitle">Organizational axes</span>
+      </div>
+      <mat-form-field style="width: 200px" floatPlaceholder="never">
+        <mat-select class="sort_md_select" placeholder="{{ 'Project.suggestions' | translate }}" [(ngModel)]="myFilter2" floatPlaceholder="never" >
+          <mat-option *ngFor="let sorting of sortings" [value]="sorting.value" (click)="filterProjects($event);">{{ sorting.name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="galleryContent">
+    <mat-grid-list class="grid" cols="{{colsNumber}}" rowHeight="186px" gutterSize="18px">
+      <mat-grid-tile
+        *ngFor="let tile of tiles"
+        [colspan]="1"
+        [rowspan]="1" [routerLink]="['/project', tile.projectSapId]" (click)="onSelect(tile)">
+        <app-project-card [completionPercentage]="tile.completionPercentage"
+                          [expectedFinishDate]="tile.estEndDate"
+                          [projectManagerPicture]="tile.managerPicture"
+                          [projectName]="tile.projectName"
+                          [projectStatus]="tile.projectStatus"
+                          [thumbnail]="tile.projectSapId">
+        </app-project-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
+

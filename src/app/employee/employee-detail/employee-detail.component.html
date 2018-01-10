@@ -1,0 +1,37 @@
+<div class="profile_container" *ngIf="employee">
+  <div class="profileWrapper">
+    <div class="profileBody">
+        <div class="panel-employee">
+          <div class="panel-box-employee">
+            <div class="panel-body-employee">
+              <!--<img class="department-icon" src="/assets/img/icon-dir/{{departmentId}}.png" onError="this.src='#';">-->
+              <div class="employee-picture">
+                <img src={{employee.picture}}
+                     onError="this.src='https://www.jordans.com/~/media/jordans%20redesign/no-image-found.ashx?h=275&la=en&w=275&hash=F87BC23F17E37D57E2A0B1CC6E2E3EEE312AAD5B';">
+              </div>
+              <div class="employee-detail">
+                <h1> {{employee.name}} </h1>
+                <p> Id SAP : {{employee.idSAP}}</p>
+                <p> {{ "EmployeeDetail.title" | translate }} {{employee.title}}</p>
+                <p> {{ "EmployeeDetail.department" | translate }} {{employee.department}}</p>
+                <p> {{ "EmployeeDetail.hiredDate" | translate }} {{employee.hiredDate}}</p>
+                <p> {{ "EmployeeDetail.immediateSuperior" | translate }} {{employee.superiorId}}</p>
+                <p> {{ "EmployeeDetail.workload" | translate }} {{employee.workload}} h/week</p>
+                <p> Email Leclerc : {{employee.leclercEmail}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-project">
+          <horizontal-carousel [projectsList]="employeeProjects" [carouselHeaderName]="carouselHeader" *ngIf="employeeProjects"></horizontal-carousel>
+        </div>
+        <div class="panel-task">
+          <app-workflow-graph #graph (filter)="changedFilterEvent($event)"></app-workflow-graph>
+          <app-slider (ratioValue)="changedRatioEvent($event)"></app-slider>
+          <app-employee-task-detail-container [filter]="filter"></app-employee-task-detail-container>
+        </div>
+      </div>
+    </div>
+</div>
+
+

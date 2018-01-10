@@ -1,0 +1,8 @@
+<i id="menu" class="material-icons" (click)="openDrawer($event);">menu</i>
+<div id="drawer">
+  <a class="drawerItem" (click)="closeDrawer($event);"><i class="material-icons" id="menuOpen" >menu</i> <p>Leclerc</p><p>Folio</p></a>
+  <a class="drawerItem" (click)="closeDrawer($event);" routerLink="/projects"><i  id="home" class="material-icons">home</i><p>{{ "Drawer.home" | translate }}</p></a>
+  <a class="drawerItem" (click)="closeDrawer($event);" routerLink="/dashboard"><i   class="material-icons">work</i><p>{{ "Drawer.dashboard" | translate }}</p></a>
+  <a class="drawerItem" (click)="closeDrawer($event);" routerLink="/notifications"><i class="material-icons">event</i> <p>{{ "Drawer.departments" | translate }}</p></a>
+  <a class="drawerItem" (click)="closeDrawer($event);" routerLink="/employees"><i class="material-icons">people</i><p>{{ "Drawer.worker" | translate }}</p></a>
+</div>
